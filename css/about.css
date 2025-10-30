@@ -1,0 +1,36 @@
+.about{
+    gap: 24px;
+    display: flex;
+    padding-bottom: 40px;
+
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+.half-col{
+    flex: 1;
+    padding-bottom: 50px;
+}
+
+
+.two-col-text {
+    display: flex;
+    flex: 1;
+    gap: 18px;
+}
+
+.list-achiv {
+    padding: 0;
+}
+
+.achiv {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+@media (max-width: 1200px){
+    .about{display: table;}
+    .two-col-text{display: table;}
+
+}
