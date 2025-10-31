@@ -6,33 +6,17 @@
 body {
     font-family: 'NT Sakharov', sans-serif;
     
-    background: hsla(205, 46%, 10%, 1);
-
-background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1 );
+    background:radial-gradient(at 30.012008099304566% 70.26140260663115%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 1) 0%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 0) 100%), radial-gradient(at 5.573703032421562% 6.993421537305977%, hsla(60, 20%, 93.13725490196079%, 1) 0%, hsla(60, 20%, 93.13725490196079%, 0) 100%), radial-gradient(at 85.04487692772253% 94.67219300555868%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 1) 0%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 0) 100%), radial-gradient(at 87.94278502775259% 74.63930250444108%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 1) 0%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 0) 100%), radial-gradient(at 16.22076386100282% 87.92608282220837%, hsla(60, 20%, 93.13725490196079%, 1) 0%, hsla(60, 20%, 93.13725490196079%, 0) 100%), radial-gradient(at 34.45622308324919% 48.397805834696115%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 1) 0%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 0) 100%), radial-gradient(at 21.56007471076028% 42.35926031782973%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 1) 0%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 0) 100%), radial-gradient(at 63.366149746333775% 27.048212345985945%, hsla(60, 20%, 93.13725490196079%, 1) 0%, hsla(60, 20%, 93.13725490196079%, 0) 100%), radial-gradient(at 37.26544580551446% 68.60859399180536%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 1) 0%, hsla(28.18181818181818, 58.40707964601769%, 55.68627450980392%, 0) 100%), radial-gradient(at 76.82968923627577% 71.09341968415453%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 1) 0%, hsla(213.75, 15.09433962264151%, 20.784313725490197%, 0) 100%);
 
     width: 100vw;
+    height: 100vh;
     font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "kern" 1;
 }
-
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-
-@font-face {
-    font-family: 'NT Sakharov';
-    src: url('../fonts/NTSakharov-Light.ttf') format('truetype'); /* Safari, Android, iOS */
-             font-style: normal;
-    font-weight: 300;
-    text-rendering: optimizeLegibility
-}
 
 @font-face {
     font-family: 'NT Sakharov';
@@ -51,65 +35,89 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0E1C26", en
 }
 
 
-
-
-
-a:link {
-    color: #aaaaaa(100% 0.01 -0.01);
-    text-decoration: underline;
-}
-
-a:visited {
-    color:#aaaaaa;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #aaaaaa;
-    text-decoration: underline;
-}
+a:link,
+a:visited,
+a:hover,
 a:active {
-    color: #aaaaaa;
-    text-decoration: underline;
-
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
 }
 
 
-.h2 {
+h2 {
     font-family: 'NT Sakharov', Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
     color: var(--textcolor);
-    line-height: 48px;
+    line-height: 24px;
     text-align: left;
 }
 
+h6 {
+    margin: 0;
+    font-family: 'NT Sakharov', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--textcolor);
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    font-family: 'NT Sakharov', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--textcolor);
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+}
 
 
 .links {
-  padding: auto;
+  margin: 24px;
   display: grid;
   place-items: center;      /* центрирует по обеим осям */
-  min-height: 100vh;
+  height: 90vh;
 }
 
 .links-list{
     display: flex;
     gap: 10px;
-    max-width: 100%;
+    width: 40vw;
     justify-content: center;
+    
 
     margin: 0 auto;
 }
 
+.btn {
+    background-color: rgba(22, 22, 22, 0.45) !important; /* Полупрозрачный фон */
+    backdrop-filter: blur(10px); /* Размытие фона */
+    -webkit-backdrop-filter: blur(10px); /* Поддержка Safari */
+    height: 190px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center; 
+
+}
+
 .square-btn {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 100%;
   opacity: 70%;
   background-size: cover;
   background-position: center;
   background-color: transparent;
+  padding: auto;
   cursor: pointer;
   outline: none;
   filter: grayscale(100%);
@@ -117,10 +125,11 @@ a:active {
 }
 
 /* Эффект при наведении */
-.square-btn:hover {
+
+.btn:hover {
   opacity: 95%;
   filter: grayscale(10%);
-  transform: scale(1.05); /* увеличение на 5% */
+  transform: scale(1.02); /* увеличение на 5% */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* тень */
 }
 
@@ -129,32 +138,9 @@ a:active {
   transform: scale(0.98); /* небольшое сжатие */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-
-
-.white {color:var(--textcolor) !important; }
-.white:hover {color: #b1b1b1ff !important;}
-
 .nodecor {text-decoration: none !important; list-style: none;}
 
-
-@media (max-width: 1500px), (max-height: 820px) {
+@media (max-width: 1160px) {
+    .links-list{width: 100%;}
 }
 
-@media (max-width: 1160px), (max-height: 675px) {
-}
-
-@media (max-width: 770px) {
-    img {padding: 2%; margin-bottom: -5%}
-    
-    .profile_img {
-        height: 50vh;
-      }
-
-    .spec {
-        flex-direction: row;
-    }
-    
-    .col-md-3{
-        padding: 3%;
-    }
-}
